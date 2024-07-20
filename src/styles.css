@@ -1,0 +1,126 @@
+:root {
+    --background-color: #f5f5f5;
+    --sidebar-bg-color: #fff;
+    --text-color: #000;
+    --task-bg-color: #fff;
+    --task-text-color: #000;
+    --button-bg-color: #4CAF50;
+    --button-text-color: #fff;
+    --completed-task-text-color: #999;
+    --header-bg-color: #f5f5f5;
+}
+
+body.dark-theme {
+    --background-color: #333;
+    --sidebar-bg-color: #444;
+    --text-color: #fff;
+    --task-bg-color: #555;
+    --task-text-color: #fff;
+    --button-bg-color: #4CAF50;
+    --button-text-color: #fff;
+    --completed-task-text-color: #ccc;
+    --header-bg-color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.App {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #ddd;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg-color);
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-input > * {
+    margin-right: 10px;
+}
+
+.MuiListItem-root {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task {
+    background-color: var(--task-bg-color);
+    color: var(--task-text-color);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task.completed-task {
+    color: var(--completed-task-text-color);
+    text-decoration: line-through;
+}
+
+.add-task-button {
+    padding: 10px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-task-button:hover {
+    background-color: #45a049;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .user-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
